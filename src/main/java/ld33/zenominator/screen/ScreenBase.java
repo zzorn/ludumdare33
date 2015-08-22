@@ -55,7 +55,7 @@ public abstract class ScreenBase<G extends AdvancedGame> implements Screen<G> {
             resize(width, height);
         }
 
-        doRender(deltaTime);
+        doRender(game, deltaTime);
     }
 
     @Override public final void show() {
@@ -97,7 +97,7 @@ public abstract class ScreenBase<G extends AdvancedGame> implements Screen<G> {
      */
     protected abstract InputProcessor getInputProcessor();
 
-    protected abstract void doRender(float deltaTime);
+    protected abstract void doRender(G game, float deltaTime);
 
     protected abstract void onResize(int width, int height);
 

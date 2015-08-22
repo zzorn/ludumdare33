@@ -63,6 +63,13 @@ public class AdvancedGame<G extends AdvancedGame> extends ServiceProviderBase im
         return currentScreen;
     }
 
+    /**
+     * Stops and quits the game.
+     */
+    public final void quit() {
+        Gdx.app.exit();
+    }
+
     @Override public final void pause () {
         if (currentScreen != null) currentScreen.pause();
     }
