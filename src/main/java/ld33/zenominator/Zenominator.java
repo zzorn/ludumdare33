@@ -87,11 +87,11 @@ public final class Zenominator extends AdvancedGame<Zenominator> {
 
 
         final Entity room = world.createEntity(new Place());
-        world.createEntity(new Position(new Vector3(-1, -1, -1)),
+        world.createEntity(new Position(new Vector3(-1, -1, -1), room.get(Place.class)),
                            new Renderable(model));
-        world.createEntity(new Position(new Vector3(1, -1, -1)),
+        world.createEntity(new Position(new Vector3(1, -1, -1), room.get(Place.class)),
                            new Renderable(model));
-        world.createEntity(new Position(new Vector3(1, -1, 3)),
+        world.createEntity(new Position(new Vector3(1, -1, 3), room.get(Place.class)),
                            new Renderable(model));
 
 

@@ -20,12 +20,21 @@ public final class Position extends ComponentBase {
     }
 
     public Position(Vector3 pos) {
-        this(pos, null);
+        this(pos, null, null);
     }
 
     public Position(Vector3 pos, Quaternion dir) {
+        this(pos, dir, null);
+    }
+
+    public Position(Vector3 pos, Place place) {
+        this(pos, null, place);
+    }
+
+    public Position(Vector3 pos, Quaternion dir, Place place) {
         position.set(pos);
         if (dir != null) direction.set(dir);
+        setPlace(place);
     }
 
     /**
